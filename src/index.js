@@ -1,8 +1,9 @@
 import React from 'react';
-import {Text, TouchableOpacity} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import HomeScreen from './screens/home';
 import SettingsScreen from './screens/settings';
@@ -19,7 +20,7 @@ const App = () => {
           options={({navigation}) => ({
             headerRight: () => (
               <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
-                <Text>⚙</Text>
+                <Icon name="settings" size={30} />
               </TouchableOpacity>
             ),
           })}
